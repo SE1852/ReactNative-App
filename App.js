@@ -1,48 +1,39 @@
-import React, { Component } from 'react'
-import {
-  StyleSheet,
-  TouchableOpacity,
-  Text,
-  View,
-} from 'react-native'
 
-class App extends Component {
-    render() {
-        return (
-            <View style={styles.view}>
-                
-                <Text style={styles.red}>  just red</Text>
-                <Text style={styles.bigblue}>just bigblue</Text>
-                <Text style={[styles.bigblue, styles.red]}>bigblue, then red</Text>
-                <Text style={[styles.red, styles.bigblue]}>red, then bigblue</Text>
-            </View>
-        );
-    }
+import React, { component } from "react";
+
+import Home from "./source/Home"
+import About from "./source/About";
+import Setting from "./source/Setting";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { NavigationContainer } from "@react-navigation/native"
+
+import {
+  DrawerLayoutAndroid
+
+
+
+} from "react-native-web";
+import { ScreenStack } from "react-native-screens";
+const Stack = createNativeStackNavigator();
+
+const App = () => {
+
+  return (
+    <NavigationContainer>
+      < Stack.Navigator screenOptions={{headerShown:false}}>
+ 
+      <Stack.Screen name="Home" component={Home}   options={{ 
+      }}    />
+ <Stack.Screen name="Setting" component={Setting} />
+      <Stack.Screen name="About" component={About}  options={
+        {headerTitle:"About" , headerStyle:{backgroundColor:"green"}
+    }} />   
+      
+       </Stack.Navigator >
+    </NavigationContainer>
+
+  )
 }
 
-const styles = StyleSheet.create({
-    view:{
-      marginTop: 50,
-       flex:1,
-       flexDirection:'column',
-       justifyContent:'center',
-       alignItems:'center'
-    },
-    bigblue: {
-      flex:1,
-        color: 'green',
-        fontWeight: 'bold',
-        fontSize: 30,
-       // font-fam
-
-    },
-    red: {
-     
-      flex:1,
-      //fontFamily:'bigblue',
-        color: 'red',
-
-    },
-});
 
 export default App;
