@@ -14,6 +14,7 @@ import {
 
 } from "react-native-web";
 import { ScreenStack } from "react-native-screens";
+import ProductService from "./source/ProductService";
 const Stack = createNativeStackNavigator();
 
 const App = () => {
@@ -24,7 +25,9 @@ const App = () => {
  
       <Stack.Screen name="Home" component={Home}   options={{ 
       }}    />
- <Stack.Screen name="Setting" component={Setting} />
+      <Stack.Screen name="Store" component={ProductService} />
+
+      <Stack.Screen name="Setting" component={Setting} />
       <Stack.Screen name="About" component={About}  options={
         {headerTitle:"About" , headerStyle:{backgroundColor:"green"}
     }} />   

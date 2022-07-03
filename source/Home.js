@@ -42,7 +42,9 @@ export default Home = ({ navigation }) => {
                     }}>
                         {/* <View style={{flexDirection:"row"}}> */}
                         <View style={style.option}>
-                            <TouchableOpacity onPress={() => Alert.alert('Warnning','Service not provided')}>
+                            <TouchableOpacity
+                              onPress={() => navigation.navigate('Store')}>
+                            {/* //   onPress={() => Alert.alert('Warnning','Service not provided')}>  */}
                                 <Text style={style.textchoose}>Store </Text>
                             </TouchableOpacity>
                         </View>
@@ -75,7 +77,7 @@ const style = StyleSheet.create({
     banner: {
         flex: 5,
         margin: 60,
-        color: "#CD1A4A",
+        color: "#072d3bcc",
         fontSize: 50,
         textAlign: 'center',
         // backgroundColor:'red'
