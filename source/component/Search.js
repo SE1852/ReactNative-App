@@ -36,7 +36,9 @@ const style=StyleSheet.create({
         // fontSize:100,
         marginTop:20,
           backgroundColor:"#cb782a4a",
-        borderRadius:10
+        borderRadius:10,
+        marginBottom:100
         // shadowOpacity:10
+        
     }
 })

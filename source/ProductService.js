@@ -13,13 +13,14 @@
 
 import React from "react";
 import Search from "./component/Search";
+import RequestAPI from "./component/RequestAPI";
 // import { SearchBar } from "@rneui/themed";
 import {
     View,
     Text,
     StyleSheet,
     TextInput,
-
+    ScrollView,
 
 
 
@@ -27,13 +28,17 @@ import {
 import { Component } from "react";
 
 
+
 const ProductService = () => {
     return (
+        <ScrollView>
         <View style={style.container}>
 
             <Text style={style.header}> Find your style ! </Text>
             <Search />
+            <RequestAPI/>
         </View>
+        </ScrollView>
     );
 };
 
