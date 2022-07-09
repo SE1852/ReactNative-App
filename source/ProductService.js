@@ -21,6 +21,8 @@ import {
     StyleSheet,
     TextInput,
     ScrollView,
+    ImageBackground,
+    Button
 
 
 
@@ -31,14 +33,22 @@ import { Component } from "react";
 
 const ProductService = () => {
     return (
-        <ScrollView>
-        <View style={style.container}>
+        <ImageBackground
+            style={{ height: "100%", width: "100%" }}
+            source={require("../assets/back4.jpg")}
+            resizeMode="cover"
 
-            <Text style={style.header}> Find your style ! </Text>
-            <Search />
-            <RequestAPI/>
-        </View>
-        </ScrollView>
+        >
+            <ScrollView>
+                <View style={style.container}>
+
+                    <Text style={style.header}> Find your style ! </Text>
+                    <Search />
+                   
+                    <RequestAPI />
+                </View>
+            </ScrollView>
+        </ImageBackground>
     );
 };
 

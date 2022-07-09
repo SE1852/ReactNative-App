@@ -22,7 +22,7 @@ export default class Search extends React.Component {
             <View style={style.bar}>
                 {/* <Text style={{ marginVertical: 15, fontSize: 15 }}>sd sdsdk</Text> */}
                 <FontAwesome name='search' size={20} style={{marginRight:10, marginTop:5,marginLeft:5}}/>
-                <TextInput  placeholder="sugar, milk, vegetables,..." style={{fontSize:20 ,
+                <TextInput  placeholder="USD,EUR,VND,..." style={{fontSize:20 ,
                     }}/>
             </View>
         );
